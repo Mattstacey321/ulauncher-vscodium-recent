@@ -1,7 +1,7 @@
 {
   "required_api_version": "^2.0.0",
-  "name": "VS Code Recent",
-  "description": "Quickly open recently-opened VS Code project directories and files",
+  "name": "VS Codium Recent",
+  "description": "Quickly open recently-opened VS Codium project directories and files",
   "developer_name": "plibither8",
   "icon": "images/icon.svg",
   "preferences": [
