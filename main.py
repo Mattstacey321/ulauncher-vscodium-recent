@@ -28,7 +28,7 @@ class Utils:
 
 
 class Code:
-	open_command_paths = ["/usr/bin/code", "/bin/code", "/snap/bin/code"]
+	open_command_paths = ["/opt/vscodium-bin"]
 
 	def get_installed_path(self):
 		for path in self.open_command_paths:
@@ -42,7 +42,7 @@ class Code:
 	def get_recents(self):
 		recents = []
 		storage = json.load(
-			open(Utils.get_path(".config/Code/storage.json", True), "r"))
+			open(Utils.get_path(".config/VSCodium/storage.json", True), "r"))
 		openedPaths = storage["openedPathsList"]["entries"]
 		for path in openedPaths:
 			folder = "folderUri" in path
@@ -113,8 +113,8 @@ class KeywordQueryEventListener(EventListener):
 			items.append(
 				ExtensionResultItem(
 					icon=Utils.get_path("images/icon.svg"),
-					name="No VS Code?",
-					description="Can't find the VS Code's `code` command in your system :(",
+					name="No VSCodium?",
+					description="Can't find the VSCodium's `codium` command in your system :(",
 					highlightable=False,
 					on_enter=HideWindowAction(),
 				)
